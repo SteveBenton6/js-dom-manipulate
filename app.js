@@ -69,7 +69,23 @@ console.log(img.src);
 
 // Example 4 -  Getting & Setting Attributes
 console.log("\nSECTION 4 - Getting & Setting Attributes");
-// No Code
+
+// Look for values of the input range element
+const range = document.querySelector("input[type='range']");
+let maxGA = range.getAttribute("max");
+console.log(maxGA);
+let stepGA = range.getAttribute("step");
+console.log(stepGA);
+let typeGA = range.getAttribute("type");
+console.log(typeGA);
+
+// Set value in the input range element
+range.setAttribute("max", "800");
+console.log(range.value);
+
+// Change type of input
+// range.setAttribute("type", "radio");
+// Commented out - so doesn't change site for next examples
 
 // Example 5 -  Finding Parent/Children/Siblings
 console.log("\nSECTION 5 - Finding Parent/Children/Siblings");
