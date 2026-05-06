@@ -19,7 +19,23 @@ console.log(pTC.textContent);
 
 // Example 2 -  innerHTML
 console.log("\nSECTION 2 - innerHTML");
-// No Code
+
+// Access form HTML and text content
+const formIH = document.querySelector("form");
+console.log(formIH.innerHTML);
+
+// Access first ul HTML and text content
+const ulIH = document.querySelector("ul");
+console.log(ulIH.innerHTML);
+
+// Update form content (using a string literal to format it)
+formIH.innerHTML = `<input type="text" placeholder="Paddington Bear Name" />
+<input type="password" placeholder="password" />
+<input type="submit" />`;
+
+// Add form content
+const h1IH = document.querySelector("h1");
+h1IH.innerHTML += ` - <u>it's great!</u>`;
 
 // Example 3 -  value, src, href, and more
 console.log("\nSECTION 3 - value, src, href, and more");
