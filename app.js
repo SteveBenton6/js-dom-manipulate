@@ -29,17 +29,43 @@ const ulIH = document.querySelector("ul");
 console.log(ulIH.innerHTML);
 
 // Update form content (using a string literal to format it)
-formIH.innerHTML = `<input type="text" placeholder="Paddington Bear Name" />
-<input type="password" placeholder="password" />
-<input type="submit" />`;
+//formIH.innerHTML = `<input type="text" placeholder="Paddington Bear Name" />
+//<input type="password" placeholder="password" />
+//<input type="submit" />`;
+// Commented out as form updated in HTML
 
-// Add form content
+// Add h1 content
 const h1IH = document.querySelector("h1");
 h1IH.innerHTML += ` - <u>it's great!</u>`;
 
 // Example 3 -  value, src, href, and more
 console.log("\nSECTION 3 - value, src, href, and more");
-// No Code
+
+// See the value of items in the form
+const formVal = document.querySelectorAll("input");
+console.dir(formVal);
+//Needs to be run in the console - value of first field
+console.log(formVal[0].value);
+//Needs to be run in the console - value of checkbox field
+console.log(formVal[3].checked);
+//Needs to be run in the console - value of last field
+console.log(formVal[4].value);
+
+//Update password placeholder text
+formVal[1].placeholder = "Please enter a password!";
+
+// View href of anchor tag
+const a = document.querySelector("a");
+console.log(a.href);
+//Change href of anchor tag
+a.href = "https://rcts.org.uk/branches/branch-cbr-cambridge/gallery-march/";
+
+// View image source
+const img = document.querySelector("img");
+console.log(img.src);
+// Change image source - do in console
+//img.src =
+//  "https://images.unsplash.com/photo-1626808642875-0aa545482dfb?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 // Example 4 -  Getting & Setting Attributes
 console.log("\nSECTION 4 - Getting & Setting Attributes");
