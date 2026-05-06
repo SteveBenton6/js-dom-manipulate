@@ -12,6 +12,11 @@ console.log(bodyqS);
 // Update h1 text content (in future linked to events so not an HTML change)
 h1IT.innerText = "Hello JavaScipt Chapter 14 Updated DOM Manipulate World!";
 
+// Access first aragraph  text content with textContent
+const pTC = document.querySelector("p");
+console.log(pTC.innerText);
+console.log(pTC.textContent);
+
 // Example 2 -  innerHTML
 console.log("\nSECTION 2 - innerHTML");
 // No Code
