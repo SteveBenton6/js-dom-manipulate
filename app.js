@@ -117,6 +117,17 @@ console.log(thirdLI.previousElementSibling.previousElementSibling);
 // Example 6 -  Changing Multiple Elements
 console.log("\nSECTION 6 - hanging Multiple Elements");
 
+// Select all the LIs and loop through
+const allLI = document.querySelectorAll("li");
+console.dir(allLI);
+for (i = 0; i < allLI.length; i++) {
+  console.log(allLI[i].innerText);
+  allLI[i].innerText = "We love Reading";
+}
+for (let li of allLI) {
+  li.innerHTML = "We love <b>Cambridge United<b>";
+}
+
 // Example 7 -  Altering Styles
 console.log("\nSECTION 7 - Altering Styles");
 
