@@ -89,7 +89,30 @@ console.log(range.value);
 
 // Example 5 -  Finding Parent/Children/Siblings
 console.log("\nSECTION 5 - Finding Parent/Children/Siblings");
-// No Code
+
+// Find and display first LI element and parent
+const firstLI = document.querySelector("li");
+console.dir(firstLI);
+console.log(firstLI.parentElement);
+console.log(firstLI.parentElement.parentElement);
+console.log(firstLI.parentElement.parentElement.parentElement);
+
+// Find and display first UL element and children
+const firstUL = document.querySelector("ul");
+console.dir(firstUL);
+console.log(firstUL.children);
+console.log(firstUL.children[0]);
+console.log(firstUL.children[0].innerText);
+
+//  Access next sibling to the first LI Element
+console.log(firstLI.nextElementSibling);
+console.log(firstLI.nextElementSibling.nextElementSibling);
+
+//  Access previous sibling to the third LI Element
+const thirdLI = firstLI.nextElementSibling.nextElementSibling;
+console.log(thirdLI);
+console.log(thirdLI.previousElementSibling);
+console.log(thirdLI.previousElementSibling.previousElementSibling);
 
 // Example 6 -  Changing Multiple Elements
 console.log("\nSECTION 6 - hanging Multiple Elements");
