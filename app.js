@@ -131,6 +131,17 @@ for (let li of allLI) {
 // Example 7 -  Altering Styles
 console.log("\nSECTION 7 - Altering Styles");
 
+// Change H1 color style to darkorange
+const h1S = document.querySelector("h1");
+h1S.style.color = "darkorange";
+
+// Change LI color styles to ones in array
+// Use allLI from above
+const colors = ["red", "green", "blue", "orange", "pink", "brown"];
+for (i = 0; i < allLI.length; i++) {
+  allLI[i].style.color = colors[i];
+}
+
 // Example 8 -  getComputedStyle
 console.log("\nSECTION 8 - getComputedStyle");
 
