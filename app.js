@@ -145,6 +145,13 @@ for (i = 0; i < allLI.length; i++) {
 // Example 8 -  getComputedStyle
 console.log("\nSECTION 8 - getComputedStyle");
 
+// get computed H1 styles
+const h1CS = document.querySelector("h1");
+const h1Styles = getComputedStyle(h1CS);
+console.dir(h1Styles);
+console.log(h1Styles.color);
+console.log(h1Styles.fontSize);
+
 // Example 9 -  Manipulating Classes
 console.log("\nSECTION 9 - Manipulating Classes");
 
