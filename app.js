@@ -175,6 +175,32 @@ todo.classList.toggle("done");
 // Example 10 -  Creating Elements
 console.log("\nSECTION 10 - Creating Elements");
 
+// Create new h2 Element
+const h2New = document.createElement("h2");
+console.dir(h2New);
+h2New.innerText = "I like trains!";
+h2New.classList.add("special");
+console.log(h2New);
+
+// Append newly created h2 Element as a child to the Section
+const section = document.querySelector("section");
+section.appendChild(h2New);
+
+// Append newly created image Element to body
+const newImg = document.createElement("img");
+newImg.src =
+  "https://images.unsplash.com/photo-1504006833117-8886a355efbf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80";
+newImg.style.width = "300px";
+document.body.appendChild(newImg);
+
+// Create new Link and append
+const newLink = document.createElement("a");
+newLink.innerText = "Nadia Video";
+newLink.href =
+  "https://www.google.com/search?sca_esv=9b0cec2fe7cd0d24&sxsrf=ANbL-n64qURvUMx39OsdN9HF9CFyw442qQ:1778254997335&udm=7&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3vWUtYx0DZdicpfE1faGYenqWn-q4MFiFFtvJjTKeAVxqtD2OJgNgqfuyx0ErWHyBWBrNpSfo8CoL7Ht9sI_lUf5bA8gr_l0uTHVh8YDYiJUAfZE6lbMORq7BcoN45QqdRZCAnygk1zfALTDeetDIRI3adTxQ9bfKVQs4BHOYEF3mxedpQ&q=nadia+batson&sa=X&sqi=2&ved=2ahUKEwjnqb6LhKqUAxVARv4FHexeJ9UQtKgLegQIUBAB&biw=1781&bih=1505&dpr=0.8#fpstate=ive&vld=cid:20047843,vid:CzP5djwg20E,st:0";
+const firstP = document.querySelector("p");
+firstP.appendChild(newLink);
+
 // Example 11 -  Append, Prepend, & insertBefore
 console.log("\nSECTION 11 - Append, Prepend, & insertBefore");
 
