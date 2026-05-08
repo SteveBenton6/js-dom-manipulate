@@ -120,13 +120,13 @@ console.log("\nSECTION 6 - hanging Multiple Elements");
 // Select all the LIs and loop through
 const allLI = document.querySelectorAll("li");
 console.dir(allLI);
-for (i = 0; i < allLI.length; i++) {
-  console.log(allLI[i].innerText);
-  allLI[i].innerText = "We love Reading";
-}
-for (let li of allLI) {
-  li.innerHTML = "We love <b>Cambridge United<b>";
-}
+//forr (i = 0; i < allLI.length; i++) {
+//  console.log(allLI[i].innerText);
+//  allLI[i].innerText = "We love Reading";
+//}
+//for (let li of allLI) {
+//  li.innerHTML = "We love <b>Cambridge United<b>";
+//}
 
 // Example 7 -  Altering Styles
 console.log("\nSECTION 7 - Altering Styles");
@@ -137,10 +137,10 @@ h1S.style.color = "darkorange";
 
 // Change LI color styles to ones in array
 // Use allLI from above
-const colors = ["red", "green", "blue", "orange", "pink", "brown"];
-for (i = 0; i < allLI.length; i++) {
-  allLI[i].style.color = colors[i];
-}
+// const colors = ["red", "green", "blue", "orange", "pink", "brown"];
+// for (i = 0; i < allLI.length; i++) {
+//   allLI[i].style.color = colors[i];
+// }
 
 // Example 8 -  getComputedStyle
 console.log("\nSECTION 8 - getComputedStyle");
@@ -154,6 +154,23 @@ console.log(h1Styles.fontSize);
 
 // Example 9 -  Manipulating Classes
 console.log("\nSECTION 9 - Manipulating Classes");
+
+// Update style applied to the todo class
+const todo = document.querySelector("#todos .todo");
+// Update each style using style
+//todo.style.color = "grey";
+//todo.style.textDecoration = "line-through";
+//todo.style.opacity = "50%";
+
+//Update class allocation for element using get/setAttribute
+console.log(todo.getAttribute("class"));
+todo.setAttribute("class", "todo done");
+
+//Update class allocation for element using classList
+console.log(todo.classList);
+todo.classList.remove("done");
+todo.classList.add("done");
+todo.classList.toggle("done");
 
 // Example 10 -  Creating Elements
 console.log("\nSECTION 10 - Creating Elements");
