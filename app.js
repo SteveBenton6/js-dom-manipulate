@@ -204,6 +204,29 @@ firstP.appendChild(newLink);
 // Example 11 -  Append, Prepend, & insertBefore
 console.log("\nSECTION 11 - Append, Prepend, & insertBefore");
 
+// Append li at the end of the first ul
+const parentUL = document.querySelector("ul");
+const newLI = document.createElement("li");
+newLI.innerText = "Add a new li in";
+parentUL.appendChild(newLI);
+
+// Insert li at the top of the first ul
+const liFirst = document.querySelector("li.todo");
+console.log(liFirst);
+parentUL.insertBefore(newLI, liFirst);
+
+// Insert li above the last li in the first ul
+const liLast = document.querySelectorAll("li.todo")[2];
+console.log(liLast);
+parentUL.insertBefore(newLI, liLast);
+
+// Insert italics text before first paragraph
+const iT = document.createElement("i");
+iT.innerText = "Some js added words in italics";
+const pFirst = document.querySelector("p");
+//firstP.insertAdjacentElement("beforebegin", iT);
+firstP.insertAdjacentElement("afterend", iT);
+
 // Example 12 -  removeChild & remove
 console.log("\nSECTION 12 - removeChild & remove");
 
