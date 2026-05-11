@@ -230,6 +230,15 @@ firstP.insertAdjacentElement("afterend", iT);
 // Example 12 -  removeChild & remove
 console.log("\nSECTION 12 - removeChild & remove");
 
+// To remove li with "Peas" in section ul
+const ulPeas = document.querySelector("section ul");
+const liPeas = ulPeas.querySelector(".special");
+console.log(liPeas);
+const ulDeleted = ulPeas.removeChild(liPeas);
+
+// To remove h1 using remove
+h1CS.remove();
+
 // Example 13 -  NBA Scores Chart Pt1.
 console.log("\nSECTION 13 - NBA Scores Chart Pt1.");
 
