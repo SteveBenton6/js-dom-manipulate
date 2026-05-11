@@ -84,3 +84,27 @@ const warriorsGames = [
     },
   },
 ];
+
+// Create Parent
+const ulParent = document.createElement("ul");
+for (let game of warriorsGames) {
+  const { homeTeam, awayTeam } = game;
+  const gameLi = document.createElement("li");
+
+  const { team: hTeam, points: hPoints } = homeTeam;
+  const { team: aTeam, points: aPoints } = awayTeam;
+  console.log(`${aTeam} @ ${hTeam}`);
+
+  const teamNames = `${aTeam} @ ${hTeam}`;
+  let scoreLine;
+  if (aPoints > hPoints) {
+    scoreLine = `<b>${aPoints}</b>-${hPoints}`;
+  } else {
+    scoreLine = `${aPoints}-<b>${hPoints}</b>`;
+  }
+
+  gameLi.innerHTML = `${teamNames} ${scoreLine}`;
+  console.log(scoreLine);
+  ulParent.appendChild(gameLi);
+}
+document.body.prepend(ulParent);
